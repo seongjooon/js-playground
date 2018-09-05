@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI 지수 측정</title>
+</head>
+
+<body>
+    <h1>BMI(체질량 지수 측정)</h1>
+    <script>
+        for (bmiData = 0; bmiData < 40; bmiData++) {
+            alert('체질량 지수 측정해줄게')
+            var userNumbers = prompt("키(cm),몸무게(kg) 입력해바")
+            var inputStrNumbers = [userNumbers.slice(0, 3), userNumbers.slice(4, 6)];
+            var inputNumbers = inputStrNumbers.map(strNumber => parseInt(strNumber, 10))
+            document.write("키 : " + inputNumbers[0] + "cm, " + "몸무게 : " + inputNumbers[1] + "kg" + "<br>");
+            var userHeightNumber = inputNumbers[0] / 100;
+            var bmiData = inputNumbers[1] / Math.pow(userHeightNumber, 2)
+            document.write("나의 BMI :" + bmiData.toFixed(1) + "<br>");
+            if (18.5 <= bmiData && bmiData <= 23) {
+                document.write("BMI가 정상이네요.")
+                break;
+            } else if (bmiData < 18.5) {
+                document.write("BMI가 저체중이네요")
+                break;
+            } else (23 < bmiData)
+                document.write("BMI가 과체중이네요")
+                break;
+            }
+        
+    </script>
+</body>
+
+</html>
