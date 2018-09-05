@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>홀짝 판별</title>
+</head>
+
+<body>
+    <script>
+        alert('홀짝인지 보자')
+        var userNumber = prompt("입력해봐바");
+        var changedNumber = Number(userNumber);
+        console.log(changedNumber)
+        if (changedNumber % 2 === 0) {
+            alert(`당신의 ${changedNumber}은(는) 짝수입니다.`)
+            document.write(`당신의 ${changedNumber}은(는) 짝수입니다.`)
+        } else {
+            alert(`당신의 ${changedNumber}은(는) 홀수입니다.`)
+            document.write(`당신의 ${changedNumber}은(는) 홀수입니다.`)
+        }
+    </script>
+</body>
+
+</html>
