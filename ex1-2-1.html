@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>갯수, 합 구하기</title>
+</head>
+
+<body>
+    <h1>갯수, 합 구하기</h1>
+    <script>
+        var inputNumbers = prompt("띄워쓰기로 구분하여 원하는 숫자를 입력하시오.").split(" ");
+        document.write('당신이 넣은 숫자의 갯수 = ' + inputNumbers.length + '<br>');
+        var userNumbers = inputNumbers.map(strNumber => parseInt(strNumber, 10));
+        var reducer = (accumulator, currentValue) => accumulator + currentValue;
+        var userSumNumber = userNumbers.reduce(reducer)
+        document.write('당신이 넣은 숫자의 합 = ' + userSumNumber);
+    </script>
+</body>
+
+</html>
