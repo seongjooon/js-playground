@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>1~100까지 짝수의 합</h2>
     <script>
         var evenNumbers = [];
         for (i = 0; i <= 100; i++) {
@@ -16,7 +17,9 @@
                 evenNumbers.push(i)
             }
         }
-        console.log(evenNumbers);
+        var reducer = (accumulator, currentValue) => accumulator + currentValue;
+        var evenNumberSum = evenNumbers.reduce(reducer)
+        document.write(evenNumberSum);
     </script>
 </body>
 
