@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>소수 판별 프로그램</title>
+</head>
+
+<body>
+    <script>
+        var inputNumber = Number(prompt("숫자를 입력해주세요."));
+        var isPrimeNumber = '소수입니다.';
+        for (i = 2; i < inputNumber; i++) {
+            if (inputNumber % i === 0) {
+                isPrimeNumber = '소수가 아닙니다.';
+            }
+        }
+        alert(isPrimeNumber)
+    </script>
+</body>
+
+</html>
