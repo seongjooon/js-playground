@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1~10000 소수 기록</title>
+</head>
+
+<body>
+    <script>
+        var numbers = {};
+        numbers.all = [];
+        numbers.prime = [];
+        
+        numbers.addAll = function () {
+            for (i = 2; i <= 10000; i++) {
+                this.all.push(i);
+            }
+        };
+
+        numbers.isPrime = function (number) {
+            for (i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        };
+
+        numbers.addPrime = function (allNum) {
+            allNum.forEach(function (elementOfAllNum) {
+                if (numbers.isPrime(elementOfAllNum)) {
+                    numbers.prime.push(elementOfAllNum)
+                }
+            })
+        };
+        numbers.addAll();
+        numbers.addPrime(numbers.all);
+
+    </script>
+</body>
+
+</html>
