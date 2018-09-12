@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>1~10000 소수 기록</title>
+    <title>공부 한만큼 실력이 나온다.</title>
 </head>
 
 <body>
@@ -26,17 +26,17 @@
                 }
                 return true;
             },
-            addPrime: function (allNum) {
-            allNum.forEach(function (number) {
-                    if (this.isPrime(number)) {
+            addPrime: function (allNumber) {
+                allNumber.forEach((number) => {
+                    if(this.isPrime(number)) {
                         this.prime.push(number)
                     }
                 })
             }
         }
-        
+
         numbers.addAll();
-        numbers.addPrime(numbers.all);
+        numbers.addPrime(numbers.all)
     </script>
 </body>
 
