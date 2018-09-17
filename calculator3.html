@@ -1,0 +1,59 @@
+<!-- <값 입력 및 사칙연산 – 조건문>
+
+요구사항
+사용자에게 2개의 숫자 값과 사칙연산 기호(+, -, *, /) 중 하나를 입력 받는다.
+사용자가 입력한 사칙연산 기호에 따라 사칙연산을 계산한 후 결과를 출력한다.
+예를 들어 사용자는 값 2와 4 입력하고 곱셈(*) 기호를 입력하면 2 * 4의 결과인 8을 출력해야 한다.
+힌트
+사칙연산 기호가 무엇인지에 따라 사칙연산을 실행하고 결과를 출력한다.
+조건문(if/else if/else)을 사용해 구현한다.
+문자열 비교를 위해 === 연산자를 사용할 수 있다.
+if (op === '+') {
+    //code here
+} else if //... -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator3</title>
+</head>
+
+<body>
+    <h1>문자열 계산기</h1>
+    <div>
+        첫번째 숫자 :<input type="text" id="inputNumber1"> <br>
+        사 칙 연 산  : <input type="text" id="operation"> <br>
+        두번째 숫자 :<input type="text" id="inputNumber2"> <br>
+        <button onclick="calculate()">계산하기</button>
+    </div>
+    <div id="output">힘내</div>
+    <script>
+        function calculate() {
+            let inputNumber1 = Number(document.getElementById('inputNumber1').value)
+            let inputNumber2 = Number(document.getElementById('inputNumber2').value)
+            let operation = document.getElementById('operation').value
+            let outputStr = document.getElementById("output");
+            let str = "";
+            str += "<h2>계산기 구현하기</h2>";
+            if (operation === '+') {
+                str += "덧셈: " + (inputNumber1 + inputNumber2) + "<br>";
+            } else if (operation === '-') {
+                str += "뺄셈: " + (inputNumber1 - inputNumber2) + "<br>";
+            } else if (operation === '*') {
+                str += "곱셈: " + (inputNumber1 * inputNumber2) + "<br>";
+            } else if (operation === '/'){
+                str += "나눗셈: " + (inputNumber1 / inputNumber2) + "<br>";
+            } else {
+                str += "사칙연산만 입력해 임마";
+            }
+            outputStr.innerHTML = str;
+        }
+    </script>
+
+</body>
+
+</html>
