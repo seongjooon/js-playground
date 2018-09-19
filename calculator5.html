@@ -1,0 +1,105 @@
+<!-- <함수를 활용해 사칙연산 구현>
+
+학습 목표
+함수를 경험한다.
+요구사항
+메인 함수, 사용자의 값을 입력하는 함수, 출력하는 함수 등 함수로 코드를 나누어 구현한다.
+사용자의 값을 입력하는 구현은 첫 번째 숫자 값, 사칙연산 기호 및 quit, 두 번째 숫자 값 입력으로 나뉜다.
+힌트
+각 요구사항에 해당하는 함수를 하나씩 생성한 후 지금까지 main() 함수에서 구현하던 로직을 각 함수로 이동한다.
+대략 다음과 같은 함수들로 나뉠 수 있다.
+fucntion getFirstValue()
+function getSecondValue() 
+function getOperator()
+function calculate()
+function print()
+function main()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator5</title>
+</head>
+
+<body>
+    <h1>계산기</h1>
+    <div id="output">힘내</div>
+
+    <script>
+
+        function getExpression() {
+            let expression = prompt("식을 적어보세요");
+            return expression;
+        }
+        function firstExpressionAnalysis(expression) {
+            let result;
+            if (expression.includes("+")) {
+                let [first, second] = expression.split("+")
+                result = first * 1 + second * 1
+            }
+            if (expression.includes("-")) {
+                let [first, second] = expression.split("-")
+                result = first * 1 - second * 1
+            }
+            if (expression.includes("*")) {
+                let [first, second] = expression.split("*")
+                result = first * 1 * second * 1
+            }
+            if (expression.includes("/")) {
+                let [first, second] = expression.split("/")
+                result = first * 1 / second * 1
+            }
+            return result;
+        }
+        function getSecondExpression(result) {
+            let sndInputStr = prompt(`${result}에 이어서 연산해 임마`);
+            return sndInputStr;
+        }
+        function secondExpressionAnalysis(result) {
+            let sndResult = result ;
+            while (true) {
+                let sndInputStr = getSecondExpression(sndResult);
+                if (sndInputStr.includes("+")) {
+                    let [, number] = sndInputStr.split("+")
+                    sndResult += number * 1
+                }
+                if (sndInputStr.includes("-")) {
+                    let [, number] = sndInputStr.split("-")
+                    sndResult -= number * 1
+                }
+                if (sndInputStr.includes("*")) {
+                    let [, number] = sndInputStr.split("*")
+                    sndResult *= number * 1
+                }
+                if (sndInputStr.includes("/")) {
+                    let [, number] = sndInputStr.split("/")
+                    sndResult /= number * 1
+                }
+                if (sndInputStr.includes("q")) {
+                    finallyResult(sndResult)
+                    break;
+                }
+            }
+            return sndResult;
+        }
+        function finallyResult(sndResult) {
+            alert(`이게 결과야 임마 ${sndResult}`)
+        }
+
+     function main(){
+            let expression = getExpression();
+            let result = firstExpressionAnalysis(expression);
+            let sndResult = secondExpressionAnalysis(result);
+     }
+     main();
+
+    </script>
+
+</body>
+
+</html>
