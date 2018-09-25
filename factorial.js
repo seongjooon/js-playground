@@ -10,12 +10,31 @@
 // console.log(numFac(10));
 
 
-var numFac = function (number) {
-    num1 += number*(number-1)
 
-    if (number = 0) {
-        return;
-    }
-    numFac(number - 1);
+/// 일반함수를 재귀로 변환시키기
+//주찬이가 만들어 주고 이해시켜준 예제##
+
+var num = [1,2,3,4]
+var numFac = function (number, a) {
+    a *= number[i];
+    if (number[i] = 1) return a;
+    return numFac(number - 1 ,a);
 }
-console.log(numFac(5));
+console.log(numFac(num, 1));
+
+
+
+
+
+// function a(2) {
+//     if(n===0) return;
+//     console.log(n)
+//     a(1) {
+//         if(n===0) return;
+//         console.log(n)
+//         a(0) {
+//             if(n===0) return;
+//             a(-1)
+//         }
+//     }
+// }
