@@ -7,8 +7,6 @@ function getArea() {
         if (parameter[0] === "circle") {
             for (i = parameter[1]; i <= parameter[2]; i++) {
                 area = Math.PI * i * i;
-                console.log(i)
-                console.log(area);
             }
         } else if (parameter[0] === "rect") {
             area = parameter[1] * parameter[2];
