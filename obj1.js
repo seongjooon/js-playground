@@ -32,6 +32,9 @@ for(let key in widget) {
     console.log(key)
     console.log(widget)
     for(let key2 in widget[key]){
+        console.log(key2)
+        console.log(widget[key])
+
         let widget2 = widget[key]
         if(typeof widget2[key2] === "number") {
             numbersArray.push(key2);
@@ -40,3 +43,4 @@ for(let key in widget) {
 }
 console.log(numbersArray)
 
+console.log(widget.text)
