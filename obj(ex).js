@@ -32,6 +32,7 @@ function findSk(numbers) {
         }
     }
 }
-
-findSk(numbers)
-console.log(array)
+findSk(numbers);
+console.log(findSk(numbers));
+console.log(array);
+console.log(array);
