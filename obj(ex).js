@@ -26,13 +26,9 @@ let array = [];
 function findSk(numbers) {
     console.log(numbers)
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i]["type"] === "sk") {
-            array.push(numbers[i]["name"])
-        console.log(numbers[i]["childnode"])
-        }
+        if (numbers[i]["type"] === "sk") return array.push(numbers[i]["name"]);
+        console.log(numbers[i]["childnode"])    
     }
 }
 findSk(numbers);
-console.log(findSk(numbers));
-console.log(array);
 console.log(array);
