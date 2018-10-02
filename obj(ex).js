@@ -21,14 +21,24 @@ let numbers = [{
     }]
 }]
 
-let array = [];
 
+let array = [];
 function findSk(numbers) {
-    console.log(numbers)
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i]["type"] === "sk") return array.push(numbers[i]["name"]);
-        console.log(numbers[i]["childnode"])    
+        if (numbers[i]["type"] === "sk") {
+            array.push(numbers[i]["name"])
+            findSk(numbers[i]["childnode"]);
+        }
+    }
+    if (numbers.length) return array
+}
+console.log(findSk(numbers));
+console.log(array);
+
+function a() {
+    for (let i = 1; i <= 5; i++) {
+        return i;
     }
 }
-findSk(numbers);
-console.log(array);
+
+console.log(a());
