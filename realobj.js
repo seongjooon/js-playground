@@ -87,6 +87,7 @@ function findSk(numbers) {
         }
         findSk(numbers[i]["childnode"]);
     }
+    return array
 }
 console.log(findSk(numbers));
-console.log(array);
+// console.log(array);
