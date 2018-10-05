@@ -2,7 +2,7 @@
 let data = [
     { 'name': '데이터베이스', 'grade': 'A+', 'credit': 2, 'major': false },
     { 'name': '딥러닝', 'grade': 'A', 'credit': 1, 'major': true },
-    { 'name': '데이터베이스', 'grade': 'A', 'credit': 3, 'major': false },
+    { 'name': '인공지능', 'grade': 'A', 'credit': 3, 'major': false },
     { 'name': '교양영어', 'grade': 'B+', 'credit': 2, 'major': true },
     { 'name': '철학', 'grade': 'B+', 'credit': 1, 'major': false }
 ];
