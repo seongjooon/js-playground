@@ -1,48 +1,13 @@
 //학점계산기
 let data = [
-    {
-        'name': '데이터베이스',
-        'grade': 'A+',
-        'credit': 2,
-        'major': false
-    },
-    {
-        'name': '딥러닝',
-        'grade': 'A',
-        'credit': 1,
-        'major': true
-    },
-    {
-        'name' : '데이터베이스', 
-        'grade' : 'A', 
-        'credit' : 3,
-        'major' : false
-    },
-    {
-        'name' : '교양영어', 
-        'grade' : 'B+', 
-        'credit' : 2,
-      'major' : true
-    },
-    {
-        'name' : '철학', 
-        'grade' : 'B+', 
-        'credit' : 1,
-        'major' : false
-    }
+    { 'name': '데이터베이스', 'grade': 'A+', 'credit': 2, 'major': false },
+    { 'name': '딥러닝', 'grade': 'A', 'credit': 1, 'major': true },
+    { 'name': '데이터베이스', 'grade': 'A', 'credit': 3, 'major': false },
+    { 'name': '교양영어', 'grade': 'B+', 'credit': 2, 'major': true },
+    { 'name': '철학', 'grade': 'B+', 'credit': 1, 'major': false }
 ];
 // 학점 기준에 따라 변경
-let gradeTable = {
-    'A+': 4.5,
-    'A': 4,
-    'B+': 3.5,
-    'B': 3,
-    'C+': 2.5,
-    'C': 2,
-    'D+': 1.5,
-    'D': 1,
-    'F': 0
-}
+let gradeTable = { 'A+': 4.5, 'A': 4, 'B+': 3.5, 'B': 3, 'C+': 2.5, 'C': 2, 'D+': 1.5, 'D': 1, 'F': 0 }
 //전체 이수학점 하나씩 받은 배열
 function gradePush(data, gradeTable) {
     let wholeGrade = [];
@@ -105,6 +70,7 @@ function creditSum(numberArray) {
     console.log(numberSum)
     return numberSum
 }
+
 //main 함수
 function showGrade() {
     let wholeGradeAverage = gradeAverageCalculator(wholeGrade);
@@ -115,3 +81,9 @@ function showGrade() {
     return gradeWritedown
 }
 console.log(showGrade());
+
+let newArray = { 'name': '알고리즘', 'grade': 'B', 'credit': 3, 'Major': true }
+function addLecture(data, array) {
+    data.push(array)
+}
+addLecture(data, newArray);
