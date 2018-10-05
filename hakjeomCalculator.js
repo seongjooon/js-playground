@@ -43,7 +43,6 @@ let gradeTable = {
     'D': 1,
     'F': 0
 }
-
 //전체 이수학점 하나씩 받은 배열
 function gradePush(data, gradeTable) {
     let wholeGrade = [];
@@ -55,7 +54,6 @@ function gradePush(data, gradeTable) {
 }
 let wholeGrade = gradePush(data, gradeTable)
 console.log(gradePush(data, gradeTable))
-
 // 전공학점 하나씩 받은 배열
 function majorGradePush(data, gradeTable) {
     let majorGrade = [];
@@ -67,7 +65,6 @@ function majorGradePush(data, gradeTable) {
 }
 let majorGrade = majorGradePush(data, gradeTable)
 console.log(majorGradePush(data, gradeTable))
-
 //이수학점 배열
 function creditPush(data) {
     let creditArray = [];
@@ -79,7 +76,6 @@ function creditPush(data) {
 }
 let creditArray = creditPush(data);
 console.log(creditArray)
-
 //전공이수학점 배열
 function majorCreditPush(data) {
     let majorCreditArray = [];
@@ -91,7 +87,6 @@ function majorCreditPush(data) {
 }
 let majorCreditArray = majorCreditPush(data);
 console.log(majorCreditArray)
-
 // 평균값 구해주는 함수
 function gradeAverageCalculator(numberArray) {
     let numberSum = numberArray.reduce((acc, cur, i) => {
@@ -100,7 +95,6 @@ function gradeAverageCalculator(numberArray) {
     console.log(numberSum)
     let numberAverage = numberSum / numberArray.length
     console.log(numberAverage)
-
     return numberAverage;
 }
 // 합계 함수
@@ -111,7 +105,7 @@ function creditSum(numberArray) {
     console.log(numberSum)
     return numberSum
 }
-
+//main 함수
 function showGrade() {
     let wholeGradeAverage = gradeAverageCalculator(wholeGrade);
     let majorGradeAverage = gradeAverageCalculator(majorGrade)
@@ -121,4 +115,3 @@ function showGrade() {
     return gradeWritedown
 }
 console.log(showGrade());
-// > 4.5기준 총평점 : 3.92(4.0기준은 3.40),  전공평점:3.5(4.0기준은 3.10),  이수학점:12, 전공이수학점:6
