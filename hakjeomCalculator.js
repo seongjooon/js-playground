@@ -81,9 +81,3 @@ function showGrade() {
     return gradeWritedown
 }
 console.log(showGrade());
-
-let newArray = { 'name': '알고리즘', 'grade': 'B', 'credit': 3, 'Major': true }
-function addLecture(data, array) {
-    data.push(array)
-}
-addLecture(data, newArray);
