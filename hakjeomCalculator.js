@@ -73,7 +73,6 @@ function creditSum(numberArray) {
 
 // main 함수
 function showGrade() {
-    let parameter = arguments;
     let wholeGradeAverage = gradeAverageCalculator(wholeGrade);
     let majorGradeAverage = gradeAverageCalculator(majorGrade)
     let wholeCreditSum = creditSum(creditArray)
