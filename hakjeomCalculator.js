@@ -17,8 +17,6 @@ function gradePush(data, gradeTable) {
     }
     return wholeGrade;
 }
-let wholeGrade = gradePush(data, gradeTable)
-console.log(gradePush(data, gradeTable))
 // 전공점수 배열
 function majorGradePush(data, gradeTable) {
     let majorGrade = [];
@@ -28,8 +26,6 @@ function majorGradePush(data, gradeTable) {
     }
     return majorGrade;
 }
-let majorGrade = majorGradePush(data, gradeTable)
-console.log(majorGradePush(data, gradeTable))
 // 이수학점 배열
 function creditPush(data) {
     let creditArray = [];
@@ -39,8 +35,6 @@ function creditPush(data) {
     }
     return creditArray;
 }
-let creditArray = creditPush(data);
-console.log(creditArray)
 // 전공이수학점 배열
 function majorCreditPush(data) {
     let majorCreditArray = [];
@@ -50,16 +44,12 @@ function majorCreditPush(data) {
     }
     return majorCreditArray;
 }
-let majorCreditArray = majorCreditPush(data);
-console.log(majorCreditArray)
 // 평균값 함수
 function gradeAverageCalculator(numberArray) {
     let numberSum = numberArray.reduce((acc, cur, i) => {
         return acc + cur;
     }, 0)
-    console.log(numberSum)
     let numberAverage = numberSum / numberArray.length
-    console.log(numberAverage)
     return numberAverage;
 }
 // 합계 함수
@@ -67,10 +57,13 @@ function creditSum(numberArray) {
     let numberSum = numberArray.reduce((acc, cur, i) => {
         return acc + cur;
     }, 0)
-    console.log(numberSum)
     return numberSum
 }
 
+let wholeGrade = gradePush(data, gradeTable)
+let majorGrade = majorGradePush(data, gradeTable)
+let creditArray = creditPush(data);
+let majorCreditArray = majorCreditPush(data);
 // main 함수
 function showGrade() {
     let wholeGradeAverage = gradeAverageCalculator(wholeGrade);
