@@ -63,10 +63,10 @@ function getCreditSum(numberArray) {
     return numberSum
 }
 
-let wholeGrade = getGradeChangeNum(data, gradeTable)
-let majorGrade = getMajorGradeChangeNum(data, gradeTable)
-let creditArray = getCreditArr(data);
-let majorCreditArray = getMajorCreditArr(data);
+const wholeGrade = getGradeChangeNum(data, gradeTable)
+const majorGrade = getMajorGradeChangeNum(data, gradeTable)
+const creditArray = getCreditArr(data);
+const majorCreditArray = getMajorCreditArr(data);
 // main 함수
 function showGrade() {
     let wholeGradeAverage = getGradeAverage(wholeGrade, creditArray);
