@@ -8,17 +8,8 @@ let data = [
 ];
 // 학점 기준에 따라 변경
 let gradeTable = { 'A+': 4.5, 'A': 4, 'B+': 3.5, 'B': 3, 'C+': 2.5, 'C': 2, 'D+': 1.5, 'D': 1, 'F': 0 }
-//새로운 과목추가 함수
+//새로운 과목
 let newArray = { 'name': '알고리즘', 'grade': 'B', 'credit': 3, 'major': true }
-
-function addLecture(data, array, gradeTable) {
-    data.push(array);
-    console.log(data)
-    return showGrade(data, gradeTable)
-}
-addLecture(data, newArray, gradeTable);
-
-
 // 전체점수 배열(등급에 따라 점수 환산) 
 function getGradeChangeNum(data, gradeTable) {
     let wholeGrade = [];
@@ -74,8 +65,6 @@ function getCreditSum(numberArray) {
     return numberSum
 }
 
-
-
 // main 함수
 function showGrade(data, gradeTable) {
     let wholeGrade = getGradeChangeNum(data, gradeTable)
@@ -92,3 +81,10 @@ function showGrade(data, gradeTable) {
     return gradeWritedown
 }
 console.log(showGrade(data, gradeTable));
+//새로운 과목 추가 함수
+function addLecture(data, array, gradeTable) {
+    data.push(array);
+    console.log(data)
+    return showGrade(data, gradeTable)
+}
+addLecture(data, newArray, gradeTable);
