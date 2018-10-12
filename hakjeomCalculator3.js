@@ -69,6 +69,7 @@ function addLecture(data, array, gradeTable) {
     data.push(array);
     return showGrade(data, gradeTable)
 }
+//과목 제거하는 함수
 function removeLecture(deleteData, timeout) {
         setTimeout(function () {
             data = data.filter(subject => subject.name !== deleteData)
